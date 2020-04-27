@@ -20,27 +20,60 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>MY TODO</title>
+    <title>samon's todo</title>
   </head>
   <body>
-    <header>
-      <h1>Samon's Todo</h1>
-    </header>
-    <form>
-      <input type="text" class="todo-input" />
-      <button class="todo-button" type="submit">
-        <i class="fas fa-plus-square"></i>
-      </button>
-      <div class="select">
-        <select name="todos" class="filter-todo">
-          <option value="all">All</option>
-          <option value="completed">Completed</option>
-          <option value="uncompleted">Uncompleted</option>
-        </select>
+    <div id="add-todo" class="main-page">
+      <div class="flex-area">
+        <header>
+          <h1>Hi Samon!</h1>
+          <h2>got a new Task?</h2>
+        </header>
+        <form>
+          <div class="input-button">
+            <input
+              type="text"
+              class="todo-input"
+              placeholder="add new task here"
+            />
+            <button class="todo-button" type="submit">
+              <i class="fas fa-plus-square"></i>
+            </button>
+          </div>
+          <div class="select">
+            <select name="todos" class="filter-todo">
+              <option value="all">All</option>
+              <option value="completed">Completed</option>
+              <option value="uncompleted">Uncompleted</option>
+            </select>
+          </div>
+        </form>
+
+        <div class="pagination-top">
+          <div class="click-area">
+            <p>CLICK BELOW TO VIEW TODOS</p>
+            <a href="#todo-all">
+              <i class="fas fa-angle-double-down"></i>
+            </a>
+          </div>
+        </div>
       </div>
-    </form>
-    <div class="todo-container">
-      <ul class="todo-list"></ul>
+    </div>
+    <div id="todo-all" class="second-view">
+      <div class="todo-container">
+        <ul class="todo-list"></ul>
+      </div>
+      <div class="clear-area">
+        <i class="fas fa-recycle clear-button button"></i>
+      </div>
+      <div class="pagination-bottom">
+        <div class="click-area">
+          <p>CLICK BELOW TO VIEW TOP</p>
+          <a href="#add-todo">
+            <i class="fas fa-angle-double-up"></i>
+          </a>
+        </div>
+      </div>
     </div>
 
     <script
