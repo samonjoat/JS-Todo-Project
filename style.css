@@ -306,6 +306,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    padding: 20px;
+  }
+
+  header {
+    width: 90vw;
+    padding: 20px;
   }
 
   header h1 {
@@ -313,22 +320,19 @@
     color: #181133;
   }
 
-  .input-button {
-    box-shadow: 0px 0px 25px #cccccc;
-  }
-
   form {
     min-height: 5vh;
     position: relative;
+    padding: 20px;
   }
 
   form input,
   form button {
-    padding: 0rem;
+    padding: 10px;
     font-size: 1.2rem;
     border: none;
     background: white;
-    margin: 0;
+    margin: 10px;
   }
 
   input::placeholder {
@@ -340,13 +344,15 @@
     color: #faf9fa;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 100px;
+    width: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px #cccccc;
   }
 
   form input {
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    width: 400px;
+    min-width: 250px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px #cccccc;
   }
 
   form button:hover {
@@ -355,33 +361,31 @@
   }
 
   .todo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 99vh;
+    padding-top: 100px;
+    min-height: 95vh;
     position: relative;
   }
 
   .todo-list {
-    min-width: 70%;
     list-style: none;
   }
 
   .todo {
-    margin: 1.5rem;
+    margin: 0.5rem;
     background: white;
     color: #6c45eed8;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 0.5s ease;
     box-shadow: 0px 0px 25px #cccccc;
-    font-weight: 700;
+    font-weight: 500;
   }
 
   .todo li {
     flex: 1;
+    min-width: 200px;
   }
 
   .trash-btn,
@@ -389,7 +393,7 @@
     background: #ff0000bb;
     color: white;
     border: none;
-    padding: 2rem;
+    padding: 0.9rem;
     cursor: pointer;
     font-size: 0.7rem;
   }
@@ -399,7 +403,7 @@
   }
 
   .todo-item {
-    padding: 1.3rem;
+    padding: 0.5rem;
   }
 
   .fa-trash,
@@ -442,9 +446,8 @@
 
   select {
     color: #6c45ee;
-    width: 10rem;
     cursor: pointer;
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .select::after {
@@ -454,7 +457,7 @@
     top: 0;
     right: 0;
     pointer-events: none;
-    padding: 1rem;
+    padding: 0.5rem;
     transition: all 0.3s ease;
   }
 
@@ -538,8 +541,8 @@
 
   .clear-area {
     position: sticky;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     bottom: 40px;
     right: 40px;
     background-color: #6c45ee;
@@ -547,13 +550,13 @@
     border-radius: 50px;
     text-align: center;
     box-shadow: 0px 0px 25px #cccccc;
-    margin: 50px;
-    top: 200px;
+    margin: 20px;
+    top: 150px;
     z-index: 3;
   }
 
   .button {
-    margin-top: 22px;
+    margin-top: 9px;
     pointer-events: none;
   }
 
