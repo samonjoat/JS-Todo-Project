@@ -2,6 +2,15 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
 @media only screen and (min-width: 700px) {
   * {
     margin: 0;
@@ -16,6 +25,86 @@ html {
   body {
     color: #938dab;
     font-family: "Poppins" sans-serif;
+  }
+
+  .container-fluid {
+    margin: 0;
+    padding: 0;
+  }
+
+  .side-area,
+  .main-area {
+    padding: 0;
+    position: relative;
+  }
+
+  .main-area {
+    box-shadow: 0px 0px 25px #999999a2;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  .side-area {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sidebar-icons {
+    position: fixed;
+    height: 100vh;
+  }
+
+  li.icons {
+    margin: 20px;
+    list-style-type: none;
+  }
+
+  li.icons i {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-and-icons {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    outline: none;
+    text-decoration: none;
+  }
+
+  .icon-group .icons {
+    margin-top: 40px;
+  }
+
+  .icon-group .icons a {
+    color: #181133;
+    font-size: 1.5rem;
+  }
+
+  .icon-group .icons a:hover,
+  .icon-group .icons a:active {
+    color: #6c45ee;
+    font-size: 1.8rem;
+    transition: 0.15s ease-out;
+  }
+
+  ul.logo {
+    margin-top: 20px;
+  }
+  ul.logo a {
+    font-size: 2rem;
+    color: #090320;
   }
 
   .main-page {
@@ -82,8 +171,11 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 99vh;
     position: relative;
+  }
+
+  .area-todo {
+    min-height: 70vh;
   }
 
   .todo-list {
@@ -93,8 +185,9 @@ html {
 
   .todo {
     margin: 1.5rem;
-    background: white;
     color: #6c45eed8;
+    background: rgb(255, 255, 255);
+    background: #6c45ee10;
     font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
@@ -102,6 +195,7 @@ html {
     transition: all 0.5s ease;
     box-shadow: 0px 0px 25px #cccccc;
     font-weight: 700;
+    border-left: 15px solid #6c45eed8;
   }
 
   .todo li {
@@ -113,7 +207,7 @@ html {
     background: #ff0000bb;
     color: white;
     border: none;
-    padding: 2rem;
+    padding: 1.2rem;
     cursor: pointer;
     font-size: 0.7rem;
   }
@@ -123,7 +217,8 @@ html {
   }
 
   .todo-item {
-    padding: 1.3rem;
+    padding: 0.5rem;
+    margin-left: 1rem;
   }
 
   .fa-trash,
@@ -133,9 +228,11 @@ html {
 
   .completed {
     text-decoration: line-through;
-    opacity: 0.5;
+    opacity: 0.3;
     background: #6c45ee;
     color: white;
+    font-weight: 400;
+    border-left: 15px solid #001f00;
   }
 
   .fall {
@@ -156,12 +253,19 @@ html {
     border: none;
   }
 
+  .select-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .select {
     margin: 1rem;
     position: relative;
     overflow: hidden;
     box-shadow: 0px 0px 25px #cccccc;
     border-radius: 25px;
+    width: 15rem;
   }
 
   select {
@@ -215,9 +319,9 @@ html {
   }
 
   .pagination-top .click-area p {
-    color: #cccccc80;
+    color: #686868;
     font-size: 0.7rem;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   .pagination-top i {
@@ -234,24 +338,26 @@ html {
   .second-view {
     position: relative;
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    min-height: 99vh;
+    padding-top: 30px;
   }
 
   .pagination-bottom {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
   }
 
   .pagination-bottom .click-area {
-    position: absolute;
     bottom: 20px;
   }
 
   .pagination-bottom .click-area p {
-    color: #cccccc80;
+    color: #686868;
     font-size: 0.7rem;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   .pagination-bottom i {
@@ -274,6 +380,7 @@ html {
     margin: 50px;
     top: 200px;
     z-index: 3;
+    float: right;
   }
 
   .button {
@@ -302,6 +409,82 @@ html {
   body {
     color: #938dab;
     font-family: "Poppins" sans-serif;
+  }
+
+  .container-fluid {
+    margin: 0;
+    padding: 0;
+  }
+
+  .side-area,
+  .main-area {
+    padding: 0;
+    position: relative;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  .side-area {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sidebar-icons {
+    position: fixed;
+    height: 100vh;
+  }
+
+  li.icons {
+    margin: 20px;
+    list-style-type: none;
+  }
+
+  li.icons i {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-and-icons {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    outline: none;
+    text-decoration: none;
+  }
+
+  .icon-group .icons {
+    margin-top: 40px;
+  }
+
+  .icon-group .icons a {
+    color: #181133;
+    font-size: 1.5rem;
+  }
+
+  .icon-group .icons a:hover,
+  .icon-group .icons a:active {
+    color: #6c45ee;
+    font-size: 1.8rem;
+    transition: 0.15s ease-out;
+  }
+
+  ul.logo {
+    margin-top: 20px;
+  }
+  ul.logo a {
+    font-size: 2rem;
+    color: #090320;
   }
 
   .main-page {
@@ -440,12 +623,19 @@ html {
     border: none;
   }
 
+  .select-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .select {
     margin: 1rem;
     position: relative;
     overflow: hidden;
     box-shadow: 0px 0px 25px #cccccc;
     border-radius: 25px;
+    width: 10rem;
   }
 
   select {
@@ -498,8 +688,8 @@ html {
   }
 
   .pagination-top .click-area p {
-    color: #800000;
-    font-size: 1.7rem;
+    color: #686868;
+    font-size: 0.7rem;
     font-weight: 500;
   }
 
@@ -527,14 +717,13 @@ html {
   }
 
   .pagination-bottom .click-area {
-    position: absolute;
     bottom: 20px;
   }
 
   .pagination-bottom .click-area p {
-    color: #cccccc80;
+    color: #686868;
     font-size: 0.7rem;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   .pagination-bottom i {
@@ -544,23 +733,25 @@ html {
   }
 
   .clear-area {
+    display: none;
     position: sticky;
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     bottom: 40px;
-    left: 40px;
+    right: 40px;
     background-color: #6c45ee;
     color: #fff;
     border-radius: 50px;
     text-align: center;
     box-shadow: 0px 0px 25px #cccccc;
-    margin: 20px;
-    top: 150px;
+    margin: 25px;
+    top: 100px;
     z-index: 3;
+    float: right;
   }
 
   .button {
-    margin-top: 9px;
+    margin-top: 15px;
     pointer-events: none;
   }
 

@@ -16,9 +16,11 @@ function addTodo(e) {
   //Prevent natural behaviour
   e.preventDefault();
 
-  if (userInput.value == "") {
-        userInput.placeholder = `enter a valid input`;
-        return false;
+  //don't allow empty field
+  if (todoInput.value == "") {
+    todoInput.placeholder = `enter a valid input`;
+    return false;
+  }
   //Create todo div
   const todoDiv = document.createElement("div");
   todoDiv.classList.add("todo");
